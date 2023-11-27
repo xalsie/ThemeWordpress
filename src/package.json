@@ -1,0 +1,11 @@
+{
+  "name": "theme1_scss",
+  "version": "0.0.1",
+  "description": "theme1 scss",
+  "main": "",
+  "scripts": {
+    "watch": "sass --no-charset --watch scss/style.scss ../style.css"
+  },
+  "author": "LeGrizzly#0341",
+  "license": "ISC"
+}

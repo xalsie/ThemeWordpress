@@ -1,0 +1,25 @@
+/*
+Theme Name: theme1
+Theme URI: https://esgi.fr
+Author: LeGrizzly
+Author URI: https://github.com/xalsie
+Description: theme1
+Version: 0.0.1
+*/
+
+@import 'vendor/bootstrap-grid.min';
+@import 'vendor/normalize';
+@import 'partials/fonts';
+@import 'partials/colors';
+@import 'partials/functions';
+@import 'partials/globals';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/post-list';
+@import 'components/identity-card';
+@import 'components/our-team';
+@import 'components/our-partners';
+@import 'components/who-are-we';
+@import 'components/404';
+@import 'components/services-images';

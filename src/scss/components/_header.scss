@@ -1,0 +1,103 @@
+#site-header{
+	font-family: $font2;
+	padding: rem(24) 0 rem(24);
+	@include text3;
+	position: fixed;
+	top: 2rem;
+	width: 100vw;
+	z-index: 99999;
+	transition: background-color .3s;
+	background-color: var(--bg-color);
+	// @media screen and (max-width: 600px) {
+	// 	top: 0;
+	// }
+	* {
+		color: var(--bg-color);
+		font-weight: bold;
+	}
+	& .brand-icon--light {
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	&.active, &.active--404 {
+		background-color: var(--brand-main);
+		svg * {
+			fill: white;
+		}
+	}
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		li{
+			text-align: right;
+			width: 100%;
+			font-size: var(--font-lg);
+			&.current-menu-item, &.current_page_parent, &:hover{
+				a{
+					border-image-source: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+					border-width: 4px;
+					border-style: solid;
+					border-image-slice: 1;
+					border-top: none;
+					border-right: none;
+					border-left: none;
+					transition: .15s all;
+				}
+			}
+			a{
+				padding: 0 rem(7);
+				text-decoration: none;
+				line-height: 1;
+				margin: 0 rem(24);
+				transition: color 0.3s, background-color 0.3s;
+			}
+		}
+	}
+
+	.main-menu-container {
+		display: none;
+	}
+	
+	/* Style for the burger menu icon */
+	.menu-toggle {
+		cursor: pointer;
+		padding: 10px;
+	}
+	
+	.burger {
+		&--404 span {
+			background-color: white !important;
+		}
+		& span {
+			height: 3px;
+			background-color: var(--brand-main);
+			margin: 4px 0;
+			transition: 0.4s;
+			width: 15px;
+			display: block;
+			
+			&:first-of-type {
+				width: 30px;
+			}
+			&:last-of-type {
+				margin-left: 15px;
+			}
+		}
+		&.active {
+			& span {
+				background-color: var(--bg-color);
+				&:first-of-type {
+					width: 15px;
+					transform: translate(15px, 7px) rotate(-50deg);
+				}
+				&:last-of-type {
+					transform: rotate(50deg);
+				}
+			}
+		}
+	}
+}

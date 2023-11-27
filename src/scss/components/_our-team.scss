@@ -1,0 +1,36 @@
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin: 130px 0;
+    @media screen and (max-width: 600px) {
+        overflow-x: auto !important;
+    }
+
+    .member {
+        background-color: transparent; // Remove background color
+
+        .member-image {
+            width: 313px;
+            margin-right: 10px;
+        }
+
+        .member-details {
+            display: flex;
+            flex-direction: column; // Stack text elements vertically
+            flex: 1;
+
+            h2 {
+                margin: 0;
+                font-size: var(--font-sm);
+                margin-top: auto; // Align text to the bottom
+            }
+
+            p {
+                margin: 0;
+                font-size: var(--font-xs);
+                color: var(--light-grey);
+            }
+        }
+    }
+}
