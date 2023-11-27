@@ -7,19 +7,19 @@ Description: theme1
 Version: 0.0.1
 */
 
-@import 'vendor/bootstrap-grid.min';
-@import 'vendor/normalize';
-@import 'partials/fonts';
 @import 'partials/colors';
+@import 'partials/fonts';
 @import 'partials/functions';
 @import 'partials/globals';
 
-@import 'components/header';
 @import 'components/footer';
-@import 'components/post-list';
+@import 'components/header';
 @import 'components/identity-card';
-@import 'components/our-team';
 @import 'components/our-partners';
+@import 'components/our-team';
+@import 'components/post-list';
+@import 'components/services-images';
 @import 'components/who-are-we';
 @import 'components/404';
-@import 'components/services-images';
+
+@import 'assets/bootstrap-grid.min';

@@ -1,6 +1,5 @@
 #site-footer{
 	font-family: $font1;
-	// margin-top: rem(34);
 	padding: rem(66) 0;
 	text-align: center;
 	background-color: var(--brand-main);
@@ -16,7 +15,7 @@
 	}
 	.site-footer__contact {
 		text-align: end;
-    line-height: 2rem;
+    	line-height: 2rem;
 	}
 	#searchform{
 		margin: rem(34) 0;

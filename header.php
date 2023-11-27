@@ -38,6 +38,7 @@
 				<div class="burger <?php if(is_404()): ?>burger--404<?php endif; ?>">
 					<span></span>
 					<span></span>
+					<span></span>
 				</div>
 			</div>
 		</div>

@@ -9,6 +9,10 @@ body{
 	overflow-x: hidden !important;
 }
 
+body :not(section):not(div) {
+	overflow-x: visible !important;
+}
+
 body.dark{
 	--bg-color: #{$black};
 	--text-color: #{$white};
@@ -28,8 +32,6 @@ body :not(section):not(div) {
 svg{
 	fill: var(--text-color);
 }
-
-
 
 img{
 	max-width: 100%;
@@ -56,8 +58,6 @@ a{
 	background-color: var(--brand-main) !important;
 }
 
-/* Styles des publications */
-
 .page-title, .post-title{
 	text-align: center;
 	margin-bottom: rem(34);
@@ -67,7 +67,6 @@ a{
 .base-text-content {
 	@apply textContent;
 }
-
 
 .page-content, .post-content{
 	@include text5;
@@ -108,8 +107,6 @@ a{
 			margin-right: rem(10);
 		}
 	}
-
-	
 
 	.post-image{
 		margin-bottom: rem(34);
