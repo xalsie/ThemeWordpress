@@ -1,37 +1,33 @@
 <?php
 
-	if(!isset($paged)){
-		$paged = (get_query_var('paged'))? absint(get_query_var('paged')): 1;
-	}
-
 	if(!isset($base)){
 		$base = str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999)));
 	}
 
-	$the_query = new WP_Query([
+	$query = new WP_Query([
 		'posts_per_page' => 6,
 		'post_type' => 'post',
-		'paged' => $paged
+		'paged' => get_query_var('paged') ?? 1
 	]);
 ?>
 
 <ul class="post-list margin--section">
 	<?php
-	if($the_query->have_posts()){
+	if($query->have_posts()){
 
-		while($the_query->have_posts()){
-			$the_query->the_post();
-			$p = get_post();
+		while($query->have_posts()){
+			$query->the_post();
+			$post = get_post();
 		?>
 			<li>
-				<a href="<?= get_permalink($p->ID) ?>">
-					<h3><?= $p->post_title ?></h3>
-					<?= $p->post_ ?>
-					<?php if ($categories = get_the_category($p->ID)): ?>
+				<a href="<?= get_permalink($post->ID) ?>">
+					<h3><?= $post->post_title ?></h3>
+					<?= $post->post_ ?>
+					<?php if ($categories = get_the_category($post->ID)): ?>
 						<span class="post-category"><?= $categories[0]->name ?>,</span>
 					<?php endif; ?>
-					<time><?= wp_date('F j, Y', strtotime($p->post_date))  ?></time>
-					<p><?= $p->post_content ?></p>
+					<time><?= wp_date('F j, Y', strtotime($post->post_date))  ?></time>
+					<p><?= $post->post_content ?></p>
 				</a>
 			</li>
 		<?php } ?>

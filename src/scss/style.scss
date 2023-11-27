@@ -12,6 +12,7 @@ Version: 0.0.1
 @import 'partials/functions';
 @import 'partials/globals';
 
+@import 'components/404';
 @import 'components/footer';
 @import 'components/header';
 @import 'components/identity-card';
@@ -20,6 +21,5 @@ Version: 0.0.1
 @import 'components/post-list';
 @import 'components/services-images';
 @import 'components/who-are-we';
-@import 'components/404';
 
 @import 'assets/bootstrap-grid.min';
